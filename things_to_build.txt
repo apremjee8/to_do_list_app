@@ -1,0 +1,42 @@
+TO-DO LIST
+- create workspace
+- fix update entry to show current entry
+- star items / priority system
+- add keyboard shortcuts (adding, starring, completing, searching, etc.)
+- figure out how to add sub-tasks
+- flash messages when button is clicked to tell you where something got moved
+- find a nice color scheme
+- user logins
+- add bulk actions on list items (similar to gmail select)
+- figure out how to host on a real site
+- push to git
+
+
+DONE
+- move workspace tab to the right
+- update add entry for different workspaces
+- multiple to-do list views (work and personal) 
+- mark as complete button (moves item from main list to completed list)
+- completed items page (date completed and entry)
+- nav bar at the top
+- put update and completed buttons next to each other
+- make navbar fixed (need to add padding to body to do this -- check the docs for bootstrap)
+- move CSS to my own file
+- create a move to Today button
+- create a move to Waiting button
+- create Today, Waiting, and Inbox areas
+- figure out grid
+- figure out database structure
+- make buttons and list look better (table style etc.)
+
+
+STRUCTURE
+Home (Inbox) -- T, W, Not C
+Today -- Not H, W
+Waiting -- Not H, T
+Complete -- Only completed entries
+
+
+Choose a workspace to get /<workspace>
+should set a global variable with the value of <workspace> that only changes if you change workspaces
+each route looks at global variable and uses it as the active workspace

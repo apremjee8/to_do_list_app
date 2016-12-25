@@ -1,0 +1,28 @@
+{% extends "layouts.html" %}
+{% from 'macros.html' import render_field %}
+
+{% block content %}
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>{{ workspace }}: Completed</h1>
+			<p>Everything that's done.</p>
+		</div>
+	</div>
+
+	{% for entry in view_entries %}
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-9 col-md-6">
+					{{entry.timestamp.strftime('%D')}}
+				</div>
+				<div class="col-xs-9 col-md-6">
+					{{entry.entry}}
+				</div>
+			</div>
+		</div>			
+	{% endfor %}
+
+	
+{% endblock %}
+
