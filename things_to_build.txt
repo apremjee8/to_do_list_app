@@ -9,10 +9,10 @@ TO-DO LIST
 - user logins
 - add bulk actions on list items (similar to gmail select)
 - figure out how to host on a real site
-- push to git
 
 
 DONE
+- push to git
 - move workspace tab to the right
 - update add entry for different workspaces
 - multiple to-do list views (work and personal) 
