@@ -1,11 +1,11 @@
 TO-DO LIST
-- create workspace
 - fix update entry to show current entry
+- flash messages when button is clicked to tell you where something got moved
+- find a nice color scheme
+- create workspace
 - star items / priority system
 - add keyboard shortcuts (adding, starring, completing, searching, etc.)
 - figure out how to add sub-tasks
-- flash messages when button is clicked to tell you where something got moved
-- find a nice color scheme
 - user logins
 - add bulk actions on list items (similar to gmail select)
 - figure out how to host on a real site

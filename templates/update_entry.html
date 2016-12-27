@@ -2,6 +2,11 @@
 {% from 'macros.html' import render_field %}
 
 {% block content %}
+
+	{% for entry in update_entry %}
+		<p>Current Entry: {{ entry.entry }}</p>
+	{% endfor %}	
+
 	<form method="POST" action="" class="form">
 		{{ form.hidden_tag() }}
 		{% for field in form %}
@@ -9,5 +14,18 @@
 		{% endfor %}
 		<button type="submit" id="submit">Update Entry</button>
 	</form>
+
+	<div class="container" id="updateform">
+		<form form method="POST" action="" class="form">
+			<div class="form-group">
+				<div class="col-xs-8 col-md-7">	
+					<label for="formGroupExampleInput">Example label</label>
+					<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+					<hr>
+					<button type="submit" id="submit" class="btn btn-primary">Update Entry</button>
+				</div>	
+			</div>
+		</form>
+	</div>
 	
 {% endblock %}

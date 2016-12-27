@@ -19,7 +19,7 @@ def redirect_url(default='index'):
 
 def set_workspace(path):
     global final_ws 
-    final_ws = path[1:]
+    final_ws = path
     return final_ws
 
 
@@ -41,7 +41,7 @@ def index(entry_id=None):
             entry=form.entry.data, workspace=workspace
         )
         return redirect(url_for('index'))
-    return render_template('view_entries.html', view_entries=view_entries, ws=ws, name=name, form=form)
+    return render_template('view_entries.html', view_entries=view_entries, ws=ws, workspace=workspace, name=name, form=form)
 
 
 @app.route('/<workspace>', methods=['GET', 'POST'])
@@ -49,8 +49,10 @@ def inbox(workspace):
     view_entries = models.Entry.select().where(models.Entry.state =='inbox', models.Entry.workspace == workspace)
     ws = models.Workspace.select()
     form = forms.EntryForm(request.form)
-    path = request.path
-    name = path[1:]
+    path = workspace
+    print path
+    name = path
+    #workspace=name
 
     set_workspace(path) #take the workspace portion of URL and make it a global variable
 
@@ -60,7 +62,7 @@ def inbox(workspace):
             entry=form.entry.data, workspace=name
         )
         return redirect(url_for('index'))
-    return render_template('view_entries.html', view_entries=view_entries, ws=ws, name=name, form=form)
+    return render_template('view_entries.html', view_entries=view_entries, ws=ws, name=name, workspace=workspace, form=form)
 
 @app.route('/completed_entries', methods=['GET', 'POST'])
 def completed_entries():

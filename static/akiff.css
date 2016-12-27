@@ -10,6 +10,17 @@
   border: 1px solid rgba(86,61,124,.2);*/
 }
 
+#updateform {
+  /*padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: auto;
+  padding-right: auto;
+  margin-right: 50px;
+  margin-left: 50px;*/
+  display: inline-block;
+  text-align: center;
+}
+
 body {
   padding-top: 120px;
 }
