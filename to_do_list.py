@@ -7,7 +7,7 @@ import models
 app = Flask(__name__)
 app.secret_key = 'asdflkasdlgjlasjdgladgnlawnlkfwen'
 
-final_ws = 'akiff'
+final_ws = 'Oscar'
 
 
 ######### INDIVIDUAL FUNCTIONS #########
