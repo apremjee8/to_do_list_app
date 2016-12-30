@@ -50,9 +50,7 @@ def inbox(workspace):
     ws = models.Workspace.select()
     form = forms.EntryForm(request.form)
     path = workspace
-    print path
     name = path
-    #workspace=name
 
     set_workspace(path) #take the workspace portion of URL and make it a global variable
 
@@ -136,7 +134,6 @@ def create_workspace():
 def add_entry():
     global final_ws
     workspace = final_ws
-    print workspace
 
     ws = models.Workspace.select()
     form = forms.EntryForm()

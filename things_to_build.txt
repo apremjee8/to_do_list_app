@@ -1,5 +1,5 @@
 TO-DO LIST
-- fix update entry to show current entry
+- figure out how to host on a real site
 - flash messages when button is clicked to tell you where something got moved
 - find a nice color scheme
 - create workspace
@@ -8,10 +8,10 @@ TO-DO LIST
 - figure out how to add sub-tasks
 - user logins
 - add bulk actions on list items (similar to gmail select)
-- figure out how to host on a real site
 
 
 DONE
+- fix update entry to show current entry
 - push to git
 - move workspace tab to the right
 - update add entry for different workspaces
@@ -29,14 +29,3 @@ DONE
 - figure out database structure
 - make buttons and list look better (table style etc.)
 
-
-STRUCTURE
-Home (Inbox) -- T, W, Not C
-Today -- Not H, W
-Waiting -- Not H, T
-Complete -- Only completed entries
-
-
-Choose a workspace to get /<workspace>
-should set a global variable with the value of <workspace> that only changes if you change workspaces
-each route looks at global variable and uses it as the active workspace
